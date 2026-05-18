@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Production | Master Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fas fa-bolt-lightning"></i>
+                <span>AUTON_VIDEO_V3</span>
+            </div>
+            <nav class="menu">
+                <div class="menu-label">CORE SYSTEM</div>
+                <div class="menu-item active" onclick="showSection('production')">
+                    <i class="fas fa-clapperboard"></i> Production Center
+                </div>
+                <div class="menu-item" onclick="showSection('admin')">
+                    <i class="fas fa-user-shield"></i> Admin Panel
+                </div>
+                
+                <div class="menu-label">RESOURCES</div>
+                <div class="menu-item"><i class="fas fa-server"></i> Model Routing</div>
+                <div class="menu-item"><i class="fas fa-database"></i> Asset Library</div>
+                <div class="menu-item"><i class="fas fa-chart-line"></i> Analytics</div>
+            </nav>
+            <div class="user-profile">
+                <div class="status-indicator"></div>
+                <span>Root Admin: Active</span>
+            </div>
+        </aside>
+
+        <main class="main-body">
+            <section id="production-section" class="section active">
+                <header class="main-header">
+                    <h1>AI Multiverse <span>Control Center</span></h1>
+                    <p>Managing 18 autonomous agents across 0 universes</p>
+                </header>
+
+                <div class="input-container glass">
+                    <h3><i class="fas fa-terminal"></i> Initialize Production</h3>
+                    <div class="form-grid">
+                        <input type="text" id="topicInput" placeholder="Topic: e.g. Future AI Robots">
+                        <select id="platformSelect">
+                            <option>YouTube Shorts</option>
+                            <option>TikTok</option>
+                        </select>
+                        <button class="btn-launch" onclick="startProduction()">RUN ALL AGENTS</button>
+                    </div>
+                </div>
+
+                <div class="agent-grid" id="agentGrid">
+                    </div>
+            </section>
+
+            <section id="admin-section" class="section">
+                <header class="main-header">
+                    <h1>System <span>Admin Panel</span></h1>
+                    <p>Backend Configuration & API Management</p>
+                </header>
+
+                <div class="admin-grid">
+                    <div class="admin-card">
+                        <h3>API Credentials</h3>
+                        <div class="api-field">
+                            <label>OpenAI GPT-4o</label>
+                            <input type="password" value="sk-••••••••••••">
+                        </div>
+                        <div class="api-field">
+                            <label>Runway Gen-3</label>
+                            <input type="password" value="rwy-••••••••••••">
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card">
+                        <h3>Model Routing</h3>
+                        <div class="route-item">
+                            <span>Script Writing</span>
+                            <select><option>Claude 3.5 Sonnet</option></select>
+                        </div>
+                        <div class="route-item">
+                            <span>Image Gen</span>
+                            <select><option>Midjourney v6</option></select>
+                        </div>
+                    </div>
+
+                    <div class="admin-card usage-card">
+                        <h3>Credit Usage</h3>
+                        <div class="usage-stat">
+                            <span class="val">$482.00</span>
+                            <span class="lab">Credits Remaining</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-container">
+                    <h3><i class="fas fa-code"></i> AgentMonitor Live Logs</h3>
+                    <div class="terminal" id="terminalLogs">
+                        <p class="log-info">> System Initialized...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
